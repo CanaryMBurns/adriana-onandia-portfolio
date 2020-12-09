@@ -11,15 +11,14 @@
  get_header();
 ?>
 
-<?php
-
-if ( have_posts() ) {
-
-	while ( have_posts() ) {
-		the_post();
-
-		get_template_part( 'template-parts/content', get_post_type() );
-	}
-}
-
-?>
+<div class="backdrop">
+  <div class="northern-hemisphere"></div>
+  <div class="southern-hemisphere"></div>
+  <h3 class="animated-name">
+    <div class="first">Adriana</div>
+    <div class="space"></div>
+    <div class="second">Onandía</div>
+    <div class="point">.</div>
+  </h3>
+</div>
+<main class="portfolio"></main>

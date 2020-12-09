@@ -9,92 +9,153 @@ Template: twentytwenty
 */
 
 .portfolio {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 100;
-    max-width: 100vw!important;
-    min-height: 100vh;
-    margin: 0;
-    width: 100vw!important;
-    background: wheat;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  max-width: 100vw!important;
+  min-height: 100vh;
+  margin: 0;
+  width: 100vw!important;
+  background: wheat;
 }
 
 .backdrop {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 110;
-    max-width: 100vw!important;
-    min-height: 100vh;
-    margin: 0;
-    width: 100vw!important;
-    background: black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 110;
+  max-width: 100vw!important;
+  min-height: 100vh;
+  margin: 0;
+  width: 100vw!important;
+  background: transparent;
+}
+
+.backdrop .northern-hemisphere {
+position: absolute;
+top: 0;
+width: 100%;
+height: 50%;
+background: black;
+animation-name: shrink-to-top;
+animation-duration: 1s;
+animation-delay: 3.25s;
+animation-fill-mode: forwards;
+}
+
+.backdrop .southern-hemisphere {
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 50%;
+background: black;
+animation-name: shrink-to-bottom;
+animation-duration: 1s;
+animation-delay: 3.25s;
+animation-fill-mode: forwards;
 }
 
 .animated-name {
-  display: inline-block;
-  color: white;
-  transform: translateY(-200%);
+display: inline-block;
+color: white;
+transform: translateY(-200%);
+animation-name: slide-in-down-name;
+animation-duration: 0.5s;
+animation-delay: 3s;
+animation-fill-mode: forwards;
 }
 
 .animated-name * {
-    display: inline-block;
+  display: inline-block;
 }
 
 .animated-name .first {
-  animation-name: slide-in-down;
-  animation-duration: 1s;
+animation-name: slide-in-down;
+animation-duration: 1s;
 }
 
 .animated-name .second {
-  animation-name: slide-in-up;
-  animation-duration: 1s;
+animation-name: slide-in-up;
+animation-duration: 1s;
 }
 
 .animated-name .point {
-  transform: translateX(3000px);
-  animation-name: slide-in-left;
-  animation-duration: 1s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
+transform: translateX(3000px);
+animation-name: slide-in-left;
+animation-duration: 1s;
+animation-delay: 1s;
+animation-fill-mode: forwards;
 }
 
 @keyframes slide-in-down {
-  from {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
+from {
+  opacity: 0;
+  transform: translateY(-100%);
+}
 
-  to {
-    opacity: 1;
-    transform: translateY(0%);
-  }
+to {
+  opacity: 1;
+  transform: translateY(0%);
+}
 }
 
 @keyframes slide-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(100%);
-  }
+from {
+  opacity: 0;
+  transform: translateY(100%);
+}
 
-  to {
-    opacity: 1;
-    transform: translateY(0%);
-  }
+to {
+  opacity: 1;
+  transform: translateY(0%);
+}
 }
 
 @keyframes slide-in-left {
-  from {
-    transform: translateX(3000px);
-  }
+from {
+  transform: translateX(3000px);
+}
 
-  to {
-    transform: translateX(0%);
-  }
+to {
+  transform: translateX(0%);
+}
+}
+
+@keyframes shrink-to-top {
+from {
+  transform: translateY(0%);
+}
+
+to {
+  transform: translateY(-100%);
+}
+}
+
+@keyframes shrink-to-bottom {
+from {
+  transform: translateY(0%);
+}
+
+to {
+  transform: translateY(100%);
+}
+}
+
+@keyframes slide-in-down-name {
+from {
+  opacity: 1;
+  transform: translateY(-200%);
+}
+
+to {
+  opacity: 0;
+  transform: translateY(0%);
+}
 }
