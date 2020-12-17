@@ -7,9 +7,19 @@ Author: Sergio Vegas Alonso
 Author URI: 
 Template: twentytwenty
 */
+
+/* Theme variables */
+:root {
+  --white-color: #F2EEE2;
+  --black-color: #000000;
+  --grey-color: #5D6D7C;
+  --brown-color: #E2A765;
+  --highlight-color: #FDD100;
+}
+
 body {
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
   scrollbar-color: rebeccapurple green;
   scrollbar-width: thin;
 }
@@ -44,7 +54,7 @@ body {
   min-height: 100vh;
   margin: 0;
   width: 100vw!important;
-  background: wheat;
+  background: var(--white-color);
 }
 
 .backdrop {
@@ -69,7 +79,7 @@ position: absolute;
 top: 0;
 width: 100%;
 height: 50%;
-background: black;
+background:  var(--black-color);;
 animation-name: shrink-to-top;
 animation-duration: 1s;
 animation-delay: 3.25s;
@@ -81,7 +91,7 @@ position: absolute;
 bottom: 0;
 width: 100%;
 height: 50%;
-background: black;
+background:  var(--black-color);;
 animation-name: shrink-to-bottom;
 animation-duration: 1s;
 animation-delay: 3.25s;
@@ -127,6 +137,78 @@ animation-fill-mode: forwards;
 .portfolio > .page {
   width: 100vw;
   height: 100vh;
+  padding-right: 6rem;
+  padding-left: 6rem;
+}
+
+
+@media (max-width: 991px) {
+  .portfolio > .page {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+}
+
+
+.portfolio > .page.first {
+  display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;
+  background-color: var(--white-color);
+}
+
+.portfolio > .page.first .column.first {
+  width: 60%;
+}
+
+.portfolio > .page.first .column.second {
+  display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+
+.portfolio > .page.first .column.second .cover-photo-wrapper {
+  position: relative;
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 0.5s;
+  animation-delay: 4.5s;
+  animation-fill-mode: forwards;
+}
+
+.portfolio > .page.first .column.second .cover-photo-wrapper .cover-photo {
+  opacity: 0.9;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.portfolio > .page.first .column.second .cover-photo-wrapper .cover-photo-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background:  var(--white-color);;
+  mix-blend-mode: overlay;
+  opacity: 0.5;
+}
+
+.portfolio > .page.second {
+  background-color: var(--brown-color);
+}
+
+.portfolio > .page.third {
+  background-color: var(--white-color);
+}
+
+.portfolio > .page.fourth {
+  background-color: var(--brown-color);
 }
 
 @keyframes slide-in-down {
@@ -192,5 +274,15 @@ animation-fill-mode: forwards;
   to {
     opacity: 0;
     transform: translateY(0%);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
