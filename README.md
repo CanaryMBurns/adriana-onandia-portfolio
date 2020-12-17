@@ -8,3 +8,5 @@ URL: http://adrianaonandia.com/
 
 1. Add https
 2. Activate caché
+3. Mirar a ver qué está pasando con lo de los estilos duplicados
+4. Cambiar el estilo del scrollbar en firefox y retocarlo en chrome
