@@ -7,6 +7,7 @@
  * @package WordPress
  * @subpackage Twenty_Twenty
  * @since Twenty Twenty 1.0
+ * <img class="cover-photo" src="<?php get_site_url(); ?>/wp-content/uploads/2020/11/Adriana-Onandia-Comunicacion-Comienza-Aqui-scaled.jpg">
  */
  get_header();
 ?>
@@ -21,4 +22,10 @@
     <div class="point">.</div>
   </h3>
 </div>
-<main class="portfolio"></main>
+<main class="portfolio">
+	<header class="header"></header>
+	<div class="page first"></div>
+	<div class="page second"></div>
+	<div class="page third"></div>
+	<div class="page fourth"></div>
+</main>

@@ -7,9 +7,35 @@ Author: Sergio Vegas Alonso
 Author URI: 
 Template: twentytwenty
 */
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+}
+
+/* Width */
+ ::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
 .portfolio {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   left: 0;
@@ -22,7 +48,6 @@ Template: twentytwenty
 }
 
 .backdrop {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,6 +61,7 @@ Template: twentytwenty
   margin: 0;
   width: 100vw!important;
   background: transparent;
+  overflow: hidden;
 }
 
 .backdrop .northern-hemisphere {
@@ -94,68 +120,77 @@ animation-delay: 1s;
 animation-fill-mode: forwards;
 }
 
-@keyframes slide-in-down {
-from {
-  opacity: 0;
-  transform: translateY(-100%);
+.portfolio > .header {
+
 }
 
-to {
-  opacity: 1;
-  transform: translateY(0%);
+.portfolio > .page {
+  width: 100vw;
+  height: 100vh;
 }
+
+@keyframes slide-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 
 @keyframes slide-in-up {
-from {
-  opacity: 0;
-  transform: translateY(100%);
-}
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
 
-to {
-  opacity: 1;
-  transform: translateY(0%);
-}
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 
 @keyframes slide-in-left {
-from {
-  transform: translateX(3000px);
-}
+  from {
+    transform: translateX(3000px);
+  }
 
-to {
-  transform: translateX(0%);
-}
+  to {
+    transform: translateX(0%);
+  }
 }
 
 @keyframes shrink-to-top {
-from {
-  transform: translateY(0%);
-}
+  from {
+    transform: translateY(0%);
+  }
 
-to {
-  transform: translateY(-100%);
-}
+  to {
+    transform: translateY(-100%);
+  }
 }
 
 @keyframes shrink-to-bottom {
-from {
-  transform: translateY(0%);
-}
+  from {
+    transform: translateY(0%);
+  }
 
-to {
-  transform: translateY(100%);
-}
+  to {
+    transform: translateY(100%);
+  }
 }
 
 @keyframes slide-in-down-name {
-from {
-  opacity: 1;
-  transform: translateY(-200%);
-}
+  from {
+    opacity: 1;
+    transform: translateY(-200%);
+  }
 
-to {
-  opacity: 0;
-  transform: translateY(0%);
-}
+  to {
+    opacity: 0;
+    transform: translateY(0%);
+  }
 }
