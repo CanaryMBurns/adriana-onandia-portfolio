@@ -26,7 +26,15 @@
 	<header class="header"></header>
 	<div class="page first">
     <div class="column first">
+      <div class="cover-text">
+        <!-- wp:paragraph -->
+        <p>Hola, soy <strong>Adriana Onandía</strong>, <strong>Experta en Comunicación</strong>, y estoy encantada de tenerte por aquí.</p>
+        <!-- /wp:paragraph -->
 
+        <!-- wp:paragraph -->
+        <p>Mi sitio web nace con el objetivo de <strong>mostrarte algo más sobre mí</strong>, poder contarte <strong>lo qué se hacer</strong> y, sobre todo, trasladarte cómo te puedo ayudar a <strong>maximizar el impacto de tu comunicación</strong>.&nbsp;</p>
+        <!-- /wp:paragraph -->
+      </div>
     </div>
     <div class="column second">
       <div class="cover-photo-wrapper">
