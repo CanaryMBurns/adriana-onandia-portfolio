@@ -8,6 +8,13 @@ Author URI:
 Template: twentytwenty
 */
 
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
 /* Theme variables */
 :root {
   --white-color: #F2EEE2;
@@ -58,8 +65,15 @@ body {
 }
 
 .backdrop {
+  display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   position: fixed;
   top: 0;
@@ -141,14 +155,12 @@ animation-fill-mode: forwards;
   padding-left: 6rem;
 }
 
-
-@media (max-width: 991px) {
+@media (orientation: portrait) {
   .portfolio > .page {
     padding-right: 3rem;
     padding-left: 3rem;
   }
 }
-
 
 .portfolio > .page.first {
   display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -158,8 +170,60 @@ animation-fill-mode: forwards;
   background-color: var(--white-color);
 }
 
+@media (orientation: portrait) {
+  .portfolio > .page.first {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
 .portfolio > .page.first .column.first {
+  display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 60%;
+  text-align: justify;
+}
+
+@media (orientation: portrait) {
+  .portfolio > .page.first .column.first {
+    width: 100%;
+  }
+}
+
+.portfolio > .page.first .column.first .cover-text {
+  font-size: 2rem;
+  padding-right: 4rem;
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 0.5s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+}
+
+@media (orientation: portrait) {
+  .portfolio > .page.first .column.first .cover-text {
+    padding-right: 0;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .portfolio > .page.first .column.first .cover-text {
+    font-size: 1.5rem;
+  }
 }
 
 .portfolio > .page.first .column.second {
@@ -169,6 +233,12 @@ animation-fill-mode: forwards;
   display: flex;
   align-items: center;
   width: 40%;
+}
+
+@media (orientation: portrait) {
+  .portfolio > .page.first .column.second {
+    width: 90%;
+  }
 }
 
 .portfolio > .page.first .column.second .cover-photo-wrapper {
