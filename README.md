@@ -11,3 +11,4 @@ URL: http://adrianaonandia.com/
 3. Mirar a ver qué está pasando con lo de los estilos duplicados
 4. Cambiar el estilo del scrollbar en firefox y retocarlo en chrome
 5. Nombre del sitio y descripción corta repetidos.
+6. Corregir la cosa rara que pasa en mi móvil con el scroll
