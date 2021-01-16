@@ -12,7 +12,7 @@ Template: twentytwenty
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 * {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif!important;
   box-sizing: border-box;
 }
 
@@ -329,20 +329,212 @@ header.header > .subline {
 
 .portfolio > .page.second {
   background-color: var(--brown-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;  
 }
 
-.portfolio > .page.second .column.first .logos-wrapper {
+.portfolio > .page.second .title {
+  text-align: center;
+  margin: 6rem;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+@media (orientation: portrait) {
+  .portfolio > .page.second .title {
+    margin: 3rem;
+  }
+}
+
+.portfolio > .page.second p {
+  text-align: justify;
+}
+
+.portfolio > .page.third {
+  background-color: var(--white-color);
+}
+
+.portfolio > .page.third .logos-wrapper {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  column-gap: 1rem;
-  row-gap: 2rem;
+  -ms-grid-columns: 1fr 4rem 1fr 4rem 1fr 4rem 1fr 4rem 1fr 4rem 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  -webkit-column-gap: 4rem;
+     -moz-column-gap: 4rem;
+          column-gap: 4rem;
   width: 100%;
   height: 100%;  
+}.portfolio > .page.third .logos-wrapper > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;  
+}.portfolio > .page.third .logos-wrapper > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;  
+}.portfolio > .page.third .logos-wrapper > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;  
+}.portfolio > .page.third .logos-wrapper > *:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 7;  
+}.portfolio > .page.third .logos-wrapper > *:nth-child(5) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 9;  
+}.portfolio > .page.third .logos-wrapper > *:nth-child(6) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 11;  
+}.portfolio > .page.third .logos-wrapper > *:nth-child(7) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;  
+}.portfolio > .page.third .logos-wrapper > *:nth-child(8) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;  
+}.portfolio > .page.third .logos-wrapper > *:nth-child(9) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 5;  
+}.portfolio > .page.third .logos-wrapper > *:nth-child(10) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 7;  
+}.portfolio > .page.third .logos-wrapper > *:nth-child(11) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 9;  
+}.portfolio > .page.third .logos-wrapper > *:nth-child(12) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 11;  
+}.portfolio > .page.third .logos-wrapper > *:nth-child(13) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;  
+}.portfolio > .page.third .logos-wrapper > *:nth-child(14) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;  
+}.portfolio > .page.third .logos-wrapper > *:nth-child(15) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;  
+}.portfolio > .page.third .logos-wrapper > *:nth-child(16) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 7;  
+}.portfolio > .page.third .logos-wrapper > *:nth-child(17) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 9;  
+}.portfolio > .page.third .logos-wrapper > *:nth-child(18) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 11;  
 }
 
-.portfolio > .page.second .logos-wrapper a {
+@media (orientation: portrait) {
+
+  .portfolio > .page.third .logos-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2rem 1fr 2rem 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    -webkit-column-gap: 2rem;
+      -moz-column-gap: 2rem;
+            column-gap: 2rem;
+    width: 100%;
+    height: 100%;  
+  }
+  
+  .portfolio > .page.third .logos-wrapper > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;  
+  }
+  
+  .portfolio > .page.third .logos-wrapper > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;  
+  }
+  
+  .portfolio > .page.third .logos-wrapper > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;  
+  }
+  
+  .portfolio > .page.third .logos-wrapper > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;  
+  }
+  
+  .portfolio > .page.third .logos-wrapper > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;  
+  }
+  
+  .portfolio > .page.third .logos-wrapper > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 5;  
+  }
+  
+  .portfolio > .page.third .logos-wrapper > *:nth-child(7) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;  
+  }
+  
+  .portfolio > .page.third .logos-wrapper > *:nth-child(8) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;  
+  }
+  
+  .portfolio > .page.third .logos-wrapper > *:nth-child(9) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;  
+  }
+  
+  .portfolio > .page.third .logos-wrapper > *:nth-child(10) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;  
+  }
+  
+  .portfolio > .page.third .logos-wrapper > *:nth-child(11) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;  
+  }
+  
+  .portfolio > .page.third .logos-wrapper > *:nth-child(12) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 5;  
+  }
+  
+  .portfolio > .page.third .logos-wrapper > *:nth-child(13) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;  
+  }
+  
+  .portfolio > .page.third .logos-wrapper > *:nth-child(14) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;  
+  }
+  
+  .portfolio > .page.third .logos-wrapper > *:nth-child(15) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 5;  
+  }
+  
+  .portfolio > .page.third .logos-wrapper > *:nth-child(16) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;  
+  }
+  
+  .portfolio > .page.third .logos-wrapper > *:nth-child(17) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 3;  
+  }
+  
+  .portfolio > .page.third .logos-wrapper > *:nth-child(18) {
+    -ms-grid-row: 6;
+    -ms-grid-column: 5;  
+  }
+}
+
+.portfolio > .page.third .logos-wrapper a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -354,12 +546,8 @@ header.header > .subline {
   align-items: center;
 }
 
-.portfolio > .page.second .logos-wrapper a svg {
+.portfolio > .page.third .logos-wrapper a svg {
  width: 100%;
-}
-
-.portfolio > .page.third {
-  background-color: var(--white-color);
 }
 
 .portfolio > .page.fourth {
