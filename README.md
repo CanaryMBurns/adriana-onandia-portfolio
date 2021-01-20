@@ -8,7 +8,14 @@ URL: http://adrianaonandia.com/
 
 1. Add https
 2. Activate caché
-3. Mirar a ver qué está pasando con lo de los estilos duplicados
-4. Cambiar el estilo del scrollbar en firefox y retocarlo en chrome
-5. Nombre del sitio y descripción corta repetidos.
-6. Corregir la cosa rara que pasa en mi móvil con el scroll
+3. Cambiar/añadir el formulario de contacto a un modal y no permitir navegación on submit
+4. Añadir recaptcha al form
+5. Cambiar el estilo del scrollbar en firefox y retocarlo en chrome
+6. Nombre del sitio y descripción corta repetidos.
+7. Uploads??????
+8. Footer
+9. Arreglar segunda sección
+10. Estilo del blog
+11. Validación formulario en cliente
+12. correo automático para el cliente cuiando envían el formulario
+13. dónde irá el mensaje el enlace al blog?
